@@ -3,15 +3,18 @@ package main
 import "fmt"
 
 func main() {
-	b := make([]int, 0)
-	var c []int
-	fmt.Printf("len=%d cap=%d value=%v\n", len(b), cap(b), b)
-	fmt.Printf("len=%d cap=%d value=%v\n", len(c), cap(c), c)
+	f := 1.11
+	i := int(f)
+	fmt.Printf("%T %v\n", i, i)
 
-	c = make([]int, 0, 5)
-	for i := 0; i < 5; i++ {
-		c = append(c, i)
-		fmt.Println(c)
+	s := []int{1, 2, 5, 6, 2, 3, 1}
+	fmt.Println(s[2:4])
+
+	m := map[string]int{
+		"Mike":  20,
+		"Nancy": 24,
+		"Messi": 30,
 	}
-	fmt.Println(c)
+	fmt.Printf("%T %v", m, m)
+
 }
