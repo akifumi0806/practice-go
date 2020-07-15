@@ -3,34 +3,18 @@ package main
 import "fmt"
 
 func main() {
-	l := []int{100, 300, 23, 11, 23, 2, 4, 6, 4}
-	var min int
-	for i, num := range l {
-		if i == 0 {
-			min = num
-			continue
-		}
-
-		if min >= num {
-			min = num
-		}
-	}
-
-	fmt.Println(min)
-
-	m := map[string]int{
-		"apple":  200,
-		"banana": 300,
-		"grapes": 150,
-		"orange": 80,
-		"papaya": 500,
-		"kiwi":   90,
-	}
-
-	sum := 0
-	for _, v := range m {
-		sum += v
-	}
-
-	fmt.Println(sum)
+	var i int = 100
+	var j int = 200
+	var p1 *int
+	var p2 *int
+	p1 = &i
+	fmt.Println(p1)
+	p2 = &j
+	fmt.Println(p2)
+	i = *p1 + *p2
+	fmt.Println(i)
+	p2 = p1
+	fmt.Println(p2)
+	j = *p2 + i
+	fmt.Println(j)
 }
