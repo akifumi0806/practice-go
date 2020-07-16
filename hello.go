@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	var i int = 100
-	var j int = 200
+	var j int = 300
 	var p1 *int
 	var p2 *int
 	p1 = &i
