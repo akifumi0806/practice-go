@@ -2,19 +2,20 @@ package main
 
 import "fmt"
 
+type Vertex struct {
+	X, Y int
+}
+
+func (v Vertex) Plus() int {
+	return v.X + v.Y
+}
+
+func (v Vertex) String() string {
+	return fmt.Sprintf("X is %d! Y is %d!", v.X, v.Y)
+}
+
 func main() {
-	var i int = 100
-	var j int = 300
-	var p1 *int
-	var p2 *int
-	p1 = &i
-	fmt.Println(p1)
-	p2 = &j
-	fmt.Println(p2)
-	i = *p1 + *p2
-	fmt.Println(i)
-	p2 = p1
-	fmt.Println(p2)
-	j = *p2 + i
-	fmt.Println(j)
+	v := Vertex{3, 4}
+	fmt.Println(v.Plus())
+	fmt.Println(v)
 }
